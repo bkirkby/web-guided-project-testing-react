@@ -11,7 +11,7 @@ test('renders properly when fetchingData', () => {
   screen.getByText("we are fetching data");
 })
 
-test('reanders properly when not fetchingData', () => {
+test('renders properly when not fetchingData', () => {
   render(<MissionForm isFetchingData={false} />)
-  screen.getByRole("buttonn");
+  screen.getByRole("button");
 })
