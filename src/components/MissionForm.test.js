@@ -20,7 +20,7 @@ test('renders properly when not fetchingData', () => {
 
 test('getData is called when button is pressed', () => {
   const mockGetData = jest.fn();
-  render(<MissionForm isFetchingData={false} getData={ } />);
+  render(<MissionForm isFetchingData={false} getData={mockGetData} />);
 
   // const btn = screen.getByRole("button");
   const btn = screen.getByText(/get data/i);
