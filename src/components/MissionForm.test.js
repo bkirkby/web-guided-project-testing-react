@@ -1,6 +1,7 @@
 import React from 'react';
 import MissionForm from './MissionForm';
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 test('MissionForm renders', () => {
   render(<MissionForm />)
@@ -22,4 +23,6 @@ test('getData is called when button is pressed', () => {
 
   // const btn = screen.getByRole("button");
   const btn = screen.getByText(/get data/i);
+
+
 })
