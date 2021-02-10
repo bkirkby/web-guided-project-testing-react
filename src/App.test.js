@@ -12,6 +12,9 @@ test("App renders", () => {
 
 test('pushing button gets and renders missions data', async () => {
   render(<App />);
+  mockFetchMissions.mockResolvedValueOnce({
+    data: []
+  })
 
   const btn = screen.getByRole("button");
 
