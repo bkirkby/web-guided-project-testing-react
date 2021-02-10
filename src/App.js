@@ -12,18 +12,16 @@ export default function App() {
 
   const getData = () => {
     setIsFetchingData(true);
-    setTimeout(() => {
-      fetchMissions()
-        .then(res => {
-          // console.log(res);
-          setIsFetchingData(false);
-          setMissions(res.data);
-        })
-        .catch(err => {
-          setIsFetchingData(false);
-          setError(err.message);
-        });
-    }, 1000);
+    fetchMissions()
+      .then(res => {
+        // console.log(res);
+        setIsFetchingData(false);
+        setMissions(res.data);
+      })
+      .catch(err => {
+        setIsFetchingData(false);
+        setError(err.message);
+      });
   };
   return (
     <div className="App">
