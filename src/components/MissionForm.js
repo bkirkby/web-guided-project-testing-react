@@ -3,6 +3,7 @@ import React from "react";
 const MissionForm = props => {
   const handleGetData = e => {
     e.preventDefault();
+    console.log("bk: props.getData: ", props.getData)
     props.getData();
   };
 
