@@ -28,7 +28,7 @@ test('getData is called when button is pressed', () => {
   // const btn = screen.getByRole("button");
   const btn = screen.getByText(/get data/i);
 
-  expect(() => userEvent.click(btn)).not.toThrowError();
+  userEvent.click(btn);
 
   expect(mockGetData).toBeCalledTimes(1);
 })
