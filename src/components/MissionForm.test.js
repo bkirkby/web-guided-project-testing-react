@@ -13,5 +13,5 @@ test('renders properly when fetchingData', () => {
 
 test('renders properly when not fetchingData', () => {
   render(<MissionForm isFetchingData={false} />)
-  expect(() => screen.getByRole("button")).toThrow();
+  expect(() => screen.getByRole("button")).not.toThrow();
 })
