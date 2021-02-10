@@ -24,5 +24,5 @@ test('getData is called when button is pressed', () => {
   // const btn = screen.getByRole("button");
   const btn = screen.getByText(/get data/i);
 
-
+  userEvent.click(btn);
 })
