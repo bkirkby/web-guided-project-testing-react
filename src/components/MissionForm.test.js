@@ -3,5 +3,5 @@ import MissionForm from './MissionForm';
 import { render } from '@testing-library/react';
 
 test('MissionForm renders', () => {
-  render(<MissionForm />)
+  render(<MissionForm isFetchingData='' />)
 })
