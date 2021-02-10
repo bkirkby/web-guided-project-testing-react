@@ -17,4 +17,9 @@ test('renders properly when not fetchingData', () => {
   expect(() => screen.getByText(/we are fetching data/i)).toThrow();
 });
 
+test('getData is called when button is pressed', () => {
+  render(<MissionForm isFetchingData={false} />);
 
+  // const btn = screen.getByRole("button");
+  const btn = screen.getByText(/get data/i);
+})
