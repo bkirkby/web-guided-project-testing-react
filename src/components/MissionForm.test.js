@@ -9,10 +9,10 @@ test('MissionForm renders', () => {
 test('renders properly when fetchingData', () => {
   render(<MissionForm isFetchingData={true} />)
   screen.getByText("we are fetching data");
-})
+});
 
 test('renders properly when not fetchingData', () => {
   render(<MissionForm isFetchingData={false} />)
   expect(() => screen.getByRole("button")).not.toThrow();
   expect(() => screen.getByText(/we are fetching data/i)).toThrow();
-})
+});
