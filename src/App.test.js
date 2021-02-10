@@ -14,5 +14,6 @@ test('pushing button gets and renders missions data', async () => {
 
   userEvent.click(btn);
 
-  const mission = await waitFor(() => screen.getAllByTestId("mission"))
+  const missions = await waitFor(() => screen.getAllByTestId("mission"))
+
 })
