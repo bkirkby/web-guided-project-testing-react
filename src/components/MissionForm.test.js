@@ -16,3 +16,5 @@ test('renders properly when not fetchingData', () => {
   expect(() => screen.getByRole("button")).not.toThrow();
   expect(() => screen.getByText(/we are fetching data/i)).toThrow();
 });
+
+
