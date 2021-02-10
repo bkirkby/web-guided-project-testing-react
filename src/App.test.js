@@ -27,5 +27,6 @@ test('pushing button gets and renders missions data', async () => {
 
 test('api error sets the error', async () => {
   render(<App />)
-  mockFetchMissions.mockRejectedValueOne('here is my error')
+  mockFetchMissions.mockRejectedValueOnce('here is my error')
+
 })
