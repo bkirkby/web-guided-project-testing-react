@@ -9,5 +9,5 @@ test('MissionForm renders', () => {
 test('renders properly when fetchingData', () => {
   render(<MissionForm isFetchingData={true} />)
 
-  screen.
+  screen.getByText("we are fetching data")
 })
