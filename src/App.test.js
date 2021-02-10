@@ -28,7 +28,7 @@ test('pushing button gets and renders missions data', async () => {
 test('api error sets the error', async () => {
   const errorMessage = "here is my error"
   render(<App />)
-  mockFetchMissions.mockRejectedValueOnce(errorMessage)
+  mockFetchMissions.mockRejectedValueOnce({ message: errorMessage })
 
   userEvent.click(screen.getByRole("button"));
 
