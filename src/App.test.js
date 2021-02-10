@@ -13,7 +13,10 @@ test("App renders", () => {
 test('pushing button gets and renders missions data', async () => {
   render(<App />);
   mockFetchMissions.mockResolvedValueOnce({
-    data: [{ mission_id: "mission 1", mission_name: "mission one" }]
+    data: [
+      { mission_id: "mission 1", mission_name: "mission one" },
+      { mission_id: "mission 2", mission_name: "mission two" },
+    ]
   })
 
   const btn = screen.getByRole("button");
@@ -24,5 +27,5 @@ test('pushing button gets and renders missions data', async () => {
 
   // console.log("bk: missions: ", missions);
 
-  expect(missions).toHaveLength(1);
+  expect(missions).toHaveLength(2);
 })
