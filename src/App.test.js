@@ -26,7 +26,13 @@ test('pushing button gets and renders missions data', async () => {
 })
 
 test('api error sets the error', async () => {
+  const errorMessage = "here is my error"
   render(<App />)
-  mockFetchMissions.mockRejectedValueOnce('here is my error')
+  mockFetchMissions.mockRejectedValueOnce(errorMessage)
 
+  userEvent.click(screen.getByRole("button"));
+
+  const error = await waitFor(() => screen.getByText(errorMessage))
+
+  expect(error).toBeDefined()
 })
