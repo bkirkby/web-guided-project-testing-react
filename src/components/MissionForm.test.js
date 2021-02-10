@@ -29,5 +29,5 @@ test('getData is called when button is pressed', () => {
 
   userEvent.click(btn);
 
-  expect(mockGetData).toBeCalled();
+  expect(mockGetData).toBeCalledTimes(1);
 })
