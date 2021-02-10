@@ -24,5 +24,5 @@ test('pushing button gets and renders missions data', async () => {
 
   // console.log("bk: missions: ", missions);
 
-  expect(missions).toHaveLength(10);
+  expect(missions).toHaveLength(1);
 })
