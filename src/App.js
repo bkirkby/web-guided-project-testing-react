@@ -15,7 +15,7 @@ export default function App() {
     setTimeout(() => {
       fetchMissions()
         .then(res => {
-          console.log(res);
+          // console.log(res);
           setIsFetchingData(false);
           setMissions(res.data);
         })
