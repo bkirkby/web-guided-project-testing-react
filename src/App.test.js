@@ -7,7 +7,7 @@ test("App renders", () => {
   render(<App />);
 })
 
-test('pushing button gets and renders missions data', () => {
+test('pushing button gets and renders missions data', async () => {
   render(<App />);
 
   const btn = screen.getByRole("button");
