@@ -18,14 +18,14 @@ test('pushing button gets and renders missions data', async () => {
       { mission_id: "mission 2", mission_name: "mission two" },
     ]
   })
-
   const btn = screen.getByRole("button");
-
   userEvent.click(btn);
-
   const missions = await waitFor(() => screen.getAllByTestId("mission"))
-
   // console.log("bk: missions: ", missions);
-
   expect(missions).toHaveLength(2);
+})
+
+test('api error sets the error', async () => {
+  render(<App />)
+  mockFetchMissions.mockRejectedValueOne('here is my error')
 })
