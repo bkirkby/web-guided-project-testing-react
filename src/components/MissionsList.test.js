@@ -19,4 +19,6 @@ test('MissionsList renders', () => {
   let missionObjects = screen.queryAllByTestId("mission");
   expect(missionObjects).toHaveLength(0);
 
+  rerender(<MissionsList error="" missions={missionsFixture} />)
+
 })
