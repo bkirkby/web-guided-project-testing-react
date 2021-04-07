@@ -32,5 +32,5 @@ test('getData is called when button is pressed', () => {
   const mockGetData = jest.fn(() => { })
   render(<MissionForm isFetchingData={false} getData={mockGetData} />)
 
-  expect(mockGetData.mock.calls).toBe(1);
+  expect(mockGetData.mock.calls.length).toBe(1);
 })
