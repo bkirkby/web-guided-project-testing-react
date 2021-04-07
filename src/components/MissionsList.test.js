@@ -21,6 +21,6 @@ test('MissionsList renders', () => {
 
   rerender(<MissionsList error="" missions={missionsFixture} />)
   missionObjects = screen.getAllByTestId("mission");
-  expect(missionObjects).toHaveLength(1);
+  expect(missionObjects).toHaveLength(2);
 
 })
