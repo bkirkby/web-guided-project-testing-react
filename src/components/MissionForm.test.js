@@ -1,5 +1,6 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import MissionForm from './MissionForm';
 
 // describe('missionform tests', () => {
@@ -31,7 +32,8 @@ test('MissionForm renders message if fetching data', () => {
 test('getData is called when button is pressed', () => {
   const mockGetData = jest.fn(() => { })
   render(<MissionForm isFetchingData={false} getData={mockGetData} />)
+  const btn = screen.getByText(/get data/i);
 
-
+  fireEvent.click(btn);
   expect(mockGetData.mock.calls.length).toBe(1);
 })
