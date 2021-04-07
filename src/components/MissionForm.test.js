@@ -37,4 +37,5 @@ test('getData is called when button is pressed', () => {
   // fireEvent.click(btn);
   userEvent.click(btn);
   expect(mockGetData.mock.calls.length).toBe(1);
+  expect(mockGetData.mock.calls).toBe({});
 })
