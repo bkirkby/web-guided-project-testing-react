@@ -9,4 +9,5 @@ import MissionForm from './MissionForm';
 // })
 
 test('MissionForm renders', () => {
+  render(<MissionForm />)
 })
