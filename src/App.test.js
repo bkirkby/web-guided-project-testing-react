@@ -24,6 +24,6 @@ test('fetches and renders mission data', async () => {
   // expect(screen.getAllByTestId("mission")).toHaveLength(1);
 
   await waitFor(() => {
-    screen.getAllByTestId("mission").toHaveLength(0)
+    expect(screen.getByTestId("mission")).toBeDefined();
   })
 })
