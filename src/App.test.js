@@ -21,6 +21,6 @@ test('fetches and renders mission data', async () => {
   userEvent.click(btn);
 
   await waitFor(() => {
-    screen.getAllByTestId("mission").toHaveLength(1)
+    screen.getAllByTestId("mission").toHaveLength(0)
   })
 })
