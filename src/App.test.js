@@ -13,7 +13,7 @@ test('App renders', () => {
 
 test('fetches and renders mission data', async () => {
   render(<App />);
-  mockFetchMissions.mockResolveValueOnce({
+  mockFetchMissions.mockResolvedValueOnce({
     data: missionsFixture
   })
 
