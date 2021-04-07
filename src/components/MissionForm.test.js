@@ -34,6 +34,7 @@ test('getData is called when button is pressed', () => {
   render(<MissionForm isFetchingData={false} getData={mockGetData} />)
   const btn = screen.getByText(/get data/i);
 
-  fireEvent.click(btn);
+  // fireEvent.click(btn);
+  userEvent.click(btn);
   expect(mockGetData.mock.calls.length).toBe(1);
 })
