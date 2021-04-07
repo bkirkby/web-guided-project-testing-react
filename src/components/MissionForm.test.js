@@ -26,6 +26,8 @@ test('MissionForm renders message if fetching data', () => {
   render(<MissionForm isFetchingData={true} />);
 
   const message = screen.getByText(/we are fetching data/i);
+  const btn = screen.queryByText(/get data/i);
 
   expect(message).toBeDefined();
+  expect(btn).toBeNull();
 })
