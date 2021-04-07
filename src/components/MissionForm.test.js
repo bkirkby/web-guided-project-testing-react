@@ -9,5 +9,6 @@ import MissionForm from './MissionForm';
 // })
 
 test('MissionForm renders', () => {
+  // arrange, act, assert
   render(<MissionForm />)
 })
