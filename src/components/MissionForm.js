@@ -8,7 +8,6 @@ const MissionForm = props => {
 
   return (
     <>
-      {props.bogus.nothing ? <div>hi</div> : <div>ho</div>}
       {props.isFetchingData ? (
         <div>we are fetching data</div>
       ) : (
