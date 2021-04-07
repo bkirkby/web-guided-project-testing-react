@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import MissionForm from './MissionForm';
 
 // describe('missionform tests', () => {
@@ -15,4 +15,7 @@ test('MissionForm renders', () => {
 
 test('MissionForm renders button is not fetching data', () => {
   render(<MissionForm isFetchingData={false} />)
+
+  const btn = screen.getByText(/get data/i);
+  // const btn = screen.getByRole("button");
 })
