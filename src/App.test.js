@@ -25,6 +25,7 @@ test('fetches and renders mission data', async () => {
 
   await waitFor(() => {
     const missions = screen.getByTestId("mission");
-    expect(screen.getByTestId("mission")).toBeDefined();
+    expect(missions).toEqual([]);
+    // expect(screen.getByTestId("mission")).toBeDefined();
   })
 })
