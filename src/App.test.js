@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen, waitFor, wait } from '@testing-library/react';
 import App from './App';
 import mockFetchMissions from './api/fetchMissions';
 import { missionsFixture } from './components/MissionsList';
@@ -21,6 +21,8 @@ test('fetches and renders mission data', async () => {
   userEvent.click(btn);
 
   await wait();
+
+  expect(screen.getAllByTestId("mission")).toHaveLength(2);
 
   // await waitFor(() => {
   //   screen.getAllByTestId("mission").toHaveLength(0)
