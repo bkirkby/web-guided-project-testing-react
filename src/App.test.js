@@ -22,7 +22,7 @@ test('fetches and renders mission data', async () => {
 
   await wait();
 
-  expect(screen.getAllByTestId("mission")).toHaveLength(2);
+  expect(screen.getAllByTestId("mission")).toHaveLength(1);
 
   // await waitFor(() => {
   //   screen.getAllByTestId("mission").toHaveLength(0)
