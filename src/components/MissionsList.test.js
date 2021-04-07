@@ -16,7 +16,7 @@ const missionsFixture = [
 test('MissionsList renders', () => {
   const { rerender } = render(<MissionsList missions={[]} />)
 
-  let missionObjects = screen.queryAllTestId("mission");
+  let missionObjects = screen.queryAllByTestId("mission");
   expect(missionObjects).toHaveLength(0);
 
 })
