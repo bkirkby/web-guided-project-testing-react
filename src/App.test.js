@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen, waitFor, wait } from '@testing-library/react';
 import App from './App';
 import { fetchMissions as mockFetchMissions } from './api/fetchMissions';
-import { missionsFixture } from './components/MissionsList';
+import { missionsFixture } from './components/MissionsList.test';
 import userEvent from '@testing-library/user-event';
 
 jest.mock('./api/fetchMissions');
