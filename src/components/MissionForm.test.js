@@ -16,7 +16,7 @@ test('MissionForm renders', () => {
 test('MissionForm renders button is not fetching data', () => {
   render(<MissionForm isFetchingData={false} />)
 
-  const btn = screen.getByText(/get data/i);
+  const btn = screen.getByText(/get datae/i);
 
   expect(btn).toBeDefined();
   expect(btn).not.toBeNull();
