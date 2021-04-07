@@ -22,4 +22,10 @@ test('MissionForm renders button if not fetching data', () => {
   // const btn = screen.getByRole("button");
 })
 
-// test
+test('MissionForm renders message if fetching data', () => {
+  render(<MissionForm isFetchingData={true} />);
+
+  const message = screen.getByText(/we are fetching data/i);
+
+  expect(message).toBeDefined();
+})
